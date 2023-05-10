@@ -5,22 +5,56 @@ const cargarImagenes=async()=>{
 
      /**llamamos la constatnte para el msjError **/
     if(input===''){
-        mostrarError("#msj-error", "FALTA ESCRIBIR VALOR");
+        mostrarError("#msj-error", "Falta Escribir el Valor de busqueda");
         return;
     }
 
     /**variable constante para la appPixabay **/
-    const key="13119377-fc7e10c6305a7de49da6ecb25";
+    const key="36197946-5703d23ead3a4135af9d516d8";
     const url=`https://pixabay.com/api/?key=${key}&q=${input}`;
-    console.log(url);
+    //console.log(url);
     
     const respuesta=await fetch(url);
-    const resultado=async respuesta.json();
+    const resultado=await respuesta.json();
 
     /** Respùesta de las img**/
     let imagenes=resultado.hits;
-}
+    console.log(imagenes);
 
+    /** como traer las img del json **/
+    let imagenesHTML=``;
+    imagenes.map(images=>{
+        const{
+                largeImageURL, 
+                likes, 
+                previewURL, 
+                tags, 
+                views}=images;
+
+        /**como ordenar las img **/
+            imagenesHTML+=`<div class="col">
+                                <div class="card">
+                                    <img src="${previewURL}" alt="${tags}" class="card-img-top">
+                                    <div class="card-body">
+                                        <p class="card-text">${likes} Me gusta </p>
+                                        <p class="card-text">${views} Visitas </p>
+                                    </div>
+
+                                    <div class="card-footer">
+                                        <a href="${largeImageURL}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block"> Ver Imagen </a> 
+                                    </div>
+                                </div>
+                            <div>       
+                        `;
+            });
+    divListadoImagenes=document.querySelector("#listadoImagenes");
+    /**Spinner llamamos a la img que esta cargando **/
+    divListadoImagenes.innerHTML=`<div style="text-align:center">
+                                    <img src="./img/loading-gif.gif" width=300 height=300>
+                                </div>
+                                `;
+    setTimeout(()=>{divListadoImagenes.innerHTML=imagenesHTML;},3000);
+}
 /**msj Error **/
 const  mostrarError=(elemento, mensaje)=>{
     divError=document.querySelector(elemento);
