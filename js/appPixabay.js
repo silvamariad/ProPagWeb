@@ -28,7 +28,8 @@ const cargarImagenes=async()=>{
 
         /**como ordenar las img **/
         //col-12 col-sm-6 col-md-4 col-lg-3 md-4
-            imagenesHTML+=`<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        //col-lg-3 col-md-4 col-sm-6 col-xs-12
+            imagenesHTML+=`<div class="pt-4">
                                 <div class="card">
                                     <img src="${previewURL}" alt="${tags}" class="card-img-top">
                                     <div class="card-body">
