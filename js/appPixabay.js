@@ -27,14 +27,15 @@ const cargarImagenes=async()=>{
         const{largeImageURL, likes, previewURL, tags, views}=imagen;
 
         /**como ordenar las img **/
-            imagenesHTML+=`<div class="col-12">
+        //col-12 col-sm-6 col-md-4 col-lg-3 md-4
+            imagenesHTML+=`<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                 <div class="card">
                                     <img src="${previewURL}" alt="${tags}" class="card-img-top">
                                     <div class="card-body">
                                         <p class="card-text">${likes} Me gusta </p>
                                         <p class="card-text">${views} Visitas </p>
                                     </div>
-
+                                    
                                     <div class="card-footer">
                                         <a 
                                         href="${largeImageURL}" 
@@ -43,8 +44,8 @@ const cargarImagenes=async()=>{
                                         class="btn btn-primary btn-block"> 
                                         Ver Imagen </a> 
                                     </div>
-                                </div>
-                            <div>       
+                                <div>
+                            </div>       
                         `;
             });
     divListadoImagenes=document.querySelector("#listadoImagenes");
