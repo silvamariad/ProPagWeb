@@ -23,16 +23,11 @@ const cargarImagenes=async()=>{
 
     /** como traer las img del json **/
     let imagenesHTML=``;
-    imagenes.map(images=>{
-        const{
-                largeImageURL, 
-                likes, 
-                previewURL, 
-                tags, 
-                views}=images;
+    imagenes.map(imagen=>{
+        const{largeImageURL, likes, previewURL, tags, views}=imagen;
 
         /**como ordenar las img **/
-            imagenesHTML+=`<div class="col">
+            imagenesHTML+=`<div class="col-12">
                                 <div class="card">
                                     <img src="${previewURL}" alt="${tags}" class="card-img-top">
                                     <div class="card-body">
@@ -41,7 +36,12 @@ const cargarImagenes=async()=>{
                                     </div>
 
                                     <div class="card-footer">
-                                        <a href="${largeImageURL}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block"> Ver Imagen </a> 
+                                        <a 
+                                        href="${largeImageURL}" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        class="btn btn-primary btn-block"> 
+                                        Ver Imagen </a> 
                                     </div>
                                 </div>
                             <div>       
@@ -49,12 +49,15 @@ const cargarImagenes=async()=>{
             });
     divListadoImagenes=document.querySelector("#listadoImagenes");
     /**Spinner llamamos a la img que esta cargando **/
-    divListadoImagenes.innerHTML=`<div style="text-align:center">
-                                    <img src="./img/loading-gif.gif" width=300 height=300>
-                                </div>
+    divListadoImagenes.innerHTML=`  <div style="text-align:center">
+                                        <img src="./img/loading-gif.gif" width=300 height=300>
+                                    </div>
                                 `;
+    
+    /**Mostrar las img en 3seg **/
     setTimeout(()=>{divListadoImagenes.innerHTML=imagenesHTML;},3000);
 }
+
 /**msj Error **/
 const  mostrarError=(elemento, mensaje)=>{
     divError=document.querySelector(elemento);
