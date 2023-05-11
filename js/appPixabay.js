@@ -24,38 +24,28 @@ const cargarImagenes=async()=>{
     /** como traer las img del json **/
     let imagenesHTML=``;
     imagenes.map(imagen=>{
-        const{largeImageURL, likes, previewURL, tags, views}=imagen;
-/** 
-                            <div class="col">
-                                <div class="card-header py-3">
-                                    <img src="${previewURL}" alt="${tags}" class="card-img-top">
-                                    <div class="card-body">
-                                        <p class="card-text">${likes} Me gusta </p>
-                                        <p class="card-text">${views} Visitas </p>
-                                    </div>
-                                    
-                                    <div class="card-footer">
-                                        <a href="${largeImageURL}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block"> Ver Imagen </a> 
-                                    </div>
-                                <div>
-                            </div>  
-**/
+                        const{largeImageURL, likes, previewURL, tags, views}=imagen;
+
         /**como ordenar las img **/
-            imagenesHTML+=`<div class="col">
-                            <div class="card mb-4 rounded-3 shadow-sm border-primary">
-                                <div class="card-header py-3 border-primary">
-                                    <img src="${previewURL}" alt="${tags}" class="card-img-top">
+            imagenesHTML+=`
+                            <div class="row row-cols-md-3 mb-3 text-center">
+                                <div class="col">
+                                    <div class="card mb-4 rounded-3 shadow-sm">
+                                        <div class="card-header py-3">
+                                            <img src="${previewURL}" alt="${tags}" class="card-img-top">
 
-                                    <div class="card-body">
-                                            <p class="card-text">${likes} Me gusta </p>
-                                            <p class="card-text">${views} Visitas </p>
-                                    </div>
+                                            <div class="card-body">
+                                                <p class="card-text">${likes} Me gusta </p>
+                                                <p class="card-text">${views} Visitas </p>
+                                            </div>
 
-                                    <div class="card-footer">
-                                        <a href="${largeImageURL}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block"> Ver Imagen </a> 
-                                    </div>
+                                            <div class="card-footer">
+                                                <a href="${largeImageURL}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block"> Ver Imagen </a> 
+                                            </div>
+                                        </div>
+                                    </div> 
                                 </div>
-                            </div>      
+                            </div>     
                         `;
             });
     divListadoImagenes=document.querySelector("#listadoImagenes");
