@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
   }
   /* el div de html*/
+
   .listadoImagenes {
     float: left;
     width: 50%;

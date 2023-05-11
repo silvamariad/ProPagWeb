@@ -27,10 +27,8 @@ const cargarImagenes=async()=>{
         const{largeImageURL, likes, previewURL, tags, views}=imagen;
 
         /**como ordenar las img **/
-        //col-12 col-sm-6 col-md-4 col-lg-3 md-4
-        //col-lg-3 col-md-4 col-sm-6 col-xs-12
-            imagenesHTML+=`<div class="pt-4">
-                                <div class="card">
+            imagenesHTML+=`<div class="col">
+                                <div class="card mb-4 rounded-3 shadow-sm">
                                     <img src="${previewURL}" alt="${tags}" class="card-img-top">
                                     <div class="card-body">
                                         <p class="card-text">${likes} Me gusta </p>
@@ -38,18 +36,14 @@ const cargarImagenes=async()=>{
                                     </div>
                                     
                                     <div class="card-footer">
-                                        <a 
-                                        href="${largeImageURL}" 
-                                        target="_blank" 
-                                        rel="noopener noreferrer" 
-                                        class="btn btn-primary btn-block"> 
-                                        Ver Imagen </a> 
+                                        <a href="${largeImageURL}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block"> Ver Imagen </a> 
                                     </div>
                                 <div>
                             </div>       
                         `;
             });
     divListadoImagenes=document.querySelector("#listadoImagenes");
+    
     /**Spinner llamamos a la img que esta cargando **/
     divListadoImagenes.innerHTML=`  <div style="text-align:center">
                                         <img src="./img/loading-gif.gif" width=300 height=300>
