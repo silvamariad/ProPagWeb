@@ -1,29 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-body {
-  margin:0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-div {
-  flex: 1;
-}
-  /* el div de html*/
-
-  .listadoImagenes {
-    float: left;
-    width: 50%;
-    padding: 5px;
-  }
-  
-  .card-img::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+/* el div de html*/
 
   .footer{
     position: fixed;
