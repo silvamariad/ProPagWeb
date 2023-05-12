@@ -28,19 +28,21 @@ const cargarImagenes=async()=>{
 
         /**como ordenar las img **/
             imagenesHTML+=` 
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                            <div class="card-group">
-                                    <img src="${previewURL}" alt="${tags}" class="card-img-top">
-                                <div class="card-body">
-                                    <p class="card-text">${likes} Me gusta </p>
-                                    <p class="card-text">${views} Visitas </p>
-                                </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 text-center">
+                                <div class="card mb-3 rounded-3 shadow-sm">
+                                    <div class="card-header py-3">
+                                            <img src="${previewURL}" alt="${tags}" class="card-img-top">
+                                        <div class="card-body">
+                                            <p class="card-text">${likes} Me gusta </p>
+                                            <p class="card-text">${views} Visitas </p>
+                                        </div>
 
-                                <div class="card-footer">
-                                    <a href="${largeImageURL}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block"> Ver Imagen </a> 
-                                </div>
-                            </div>  
-                        </div>  
+                                        <div class="card-footer">
+                                            <a href="${largeImageURL}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block"> Ver Imagen </a> 
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div> 
                         `;
             });
     divListadoImagenes=document.querySelector("#listadoImagenes");
