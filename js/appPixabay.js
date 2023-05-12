@@ -47,7 +47,7 @@ const cargarImagenes=async()=>{
                             </div>
         * **/
             imagenesHTML+=` 
-                        <div class="table-responsive-md">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                             <div class="card">
                                     <img src="${previewURL}" alt="${tags}" class="card-img-top">
                                 <div class="card-body">
