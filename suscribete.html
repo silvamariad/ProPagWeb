@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no,
     initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Image de Pixabay</title>
     <!--=Liberias de bootstrap=-->
     <link href="./css/bootstrap.min.css" rel="stylesheet" /><!-- Archivo CSS Bootstrap 5 -->
@@ -34,43 +35,86 @@
                   </div>
                 </nav>
             </header>
-            
-            <!-- formulario de registro -->
-            <div class="col-md-6">
-                <!-- Formulario -->
-                <h4 class="mb-4">Registro</h4>
-                  <form action="./php/registro.php" method="POST">
-                      <div class="mb-3">
-                          <label for="nya" class="form-label txt_negrita">Nombres y Apellidos</label>
-                          <input type="text" class="form-control" id="nya" aria-describedby="nyaHelp" placeholder="Ejemplo: Carlos Torres Rojas" required>
-                      </div>
-
-                      <div class="mb-2">
-                         <div class="mb-2">
-                              <select class="form-select form-select-lg " aria-label=".form-select-lg example" with="">
-                                  <option selected>Tipo Documento</option>
-                                  <option value="1">Cedula</option>
-                                  <option value="2">NIT</option>
-                                  <option value="3">RUC</option>
-                                  <option value="3">Etc</option>
-                              </select>
-                              <input type="text" class="form-control" id="nya" aria-describedby="nyaHelp" placeholder="Ejemplo: 11897234" required>
-                          </div>
-                      </div>
-
-                      <div class="mb-3">
-                          <div class="col-auto">
-                              <label for="inputPassword6" class="col-form-label">Password</label>
-                              <input type="password" id="inputPassword6" class="form-control" aria-labelledby="passwordHelpInline">
-                              <span id="passwordHelpInline" class="form-text">
-                                  Su contraseña debe tener entre 8 y 20 caracteres, contener letras y números, y no debe contener espacios, caracteres especiales ni emoji.
-                              </span>
-                          </div>
-                      </div>
-                    <button type="submit" class="btn btn-primary">Aceptar</button>
-                  </form>
-            </div>
         </div>
+        <main>
+            <form action="" class="formulario" id="formulario">
+               <!--Grupo Usuario -->
+                <div class="formulario__grupo" id="grupo__usuario">
+                  <label for="usuario" class="formulario__label">Usuario</label>
+                    <div class="formulario__grupo-input">
+                      <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Carlos234">
+                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo</p>
+                </div>
+
+                <!--Grupo Nombre y Apellido -->
+                <div class="formulario__grupo" id="grupo__nombre">
+                  <label for="nombre" class="formulario__label">Nombre y Apellido</label>
+                    <div class="formulario__grupo-input">
+                      <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Carlos Torres Vargas">
+                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El nombre tiene que ser de 4 a 16 digitos y solo puede contener letras y espacio</p>
+                </div>
+
+                <!--Grupo Tipo documento -->
+                <div class="formulario__grupo" id="grupo__tdoc">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Tipo Documento</option>
+                    <option value="1">CC</option>
+                    <option value="2">RUT</option>
+                    <option value="3">NIT</option>
+                    <option value="3">ETC</option>
+                  </select>
+                  <label for="tdoc" class="formulario__label">Nro Documento</label>
+                    <div class="formulario__grupo-input">
+                      <input type="text" class="formulario__input" name="nrodoc" id="nroduc" placeholder="123456765">
+                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El Nro de Documento tiene que ser de 4 a 16 digitos y solo puede contener numeros</p>
+                </div>
+
+                 <!--Grupo contraseña -->
+                 <div class="formulario__grupo" id="grupo__password">
+                  <label for=password" class="formulario__label">Contraseña</label>
+                    <div class="formulario__grupo-input">
+                      <input type="password" class="formulario__input" name="password" id="pasword">
+                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 digitos</p>
+                </div>
+
+                 <!--Grupo contraseña 2 -->
+                 <div class="formulario__grupo" id="grupo__password2">
+                  <label for=password2" class="formulario__label">Repetir Contraseña</label>
+                    <div class="formulario__grupo-input">
+                      <input type="password" class="formulario__input" name="password2" id="pasword2">
+                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">Ambas contraseña deben ser iguales</p>
+                  </div>
+
+                   <!--Grupo correo electronico -->
+                 <div class="formulario__grupo" id="grupo__correo">
+                  <label for=correo" class="formulario__label">Correo Electronico</label>
+                    <div class="formulario__grupo-input">
+                      <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El correo solo puede contener, letras, numeros, puntos, guiones y guion bajo.</p>
+                  </div>
+                  <!--Grupo Telefono -->
+                 <div class="formulario__grupo" id="grupo__telefono">
+                  <label for=telefono" class="formulario__label">Telefono</label>
+                    <div class="formulario__grupo-input">
+                      <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="3110987485">
+                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El Telefono solo puede contener numeros y el maximo son 10 digitos</p>
+                  </div>
+            </form>
+        </main>
 
           <!-- folder-->
           <footer class="footer mt-auto py-3 bg-light">
@@ -81,5 +125,7 @@
               
           <!-- Archivo JS Bootstrap 5 -->  
           <script src="./js/bootstrap.js"></script>
+          <script src="./js/formulario.js"></script>
+          <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     </body>
 </html>
