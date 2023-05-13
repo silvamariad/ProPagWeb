@@ -39,17 +39,23 @@
             <div class="col-md-6">
                 <!-- Formulario -->
                 <h4 class="mb-4">Registro</h4>
-                  <form>
+                  <form action="./php/registro.php" method="POST">
                       <div class="mb-3">
                           <label for="nya" class="form-label txt_negrita">Nombres y Apellidos</label>
-                          <input type="text" class="form-control" id="nya" aria-describedby="nyaHelp" required>
-                          <div id="nyaHelp" class="form-text">Ejemplo: Carlos Torres Rojas</div>
+                          <input type="text" class="form-control" id="nya" aria-describedby="nyaHelp" placeholder="Ejemplo: Carlos Torres Rojas" required>
                       </div>
 
-                      <div class="mb-3">
-                          <label for="email" class="form-label txt_negrita">Email</label>
-                          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                          <div id="emailHelp" class="form-text">Ejemplo: miemail@mail.com</div>
+                      <div class="mb-2">
+                         <div class="mb-2">
+                              <select class="form-select form-select-lg " aria-label=".form-select-lg example" with="">
+                                  <option selected>Tipo Documento</option>
+                                  <option value="1">Cedula</option>
+                                  <option value="2">NIT</option>
+                                  <option value="3">RUC</option>
+                                  <option value="3">Etc</option>
+                              </select>
+                              <input type="text" class="form-control" id="nya" aria-describedby="nyaHelp" placeholder="Ejemplo: 11897234" required>
+                          </div>
                       </div>
 
                       <div class="mb-3">
