@@ -6,8 +6,9 @@
     initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Image de Pixabay</title>
-    <!--=Liberias de bootstrap=-->
-    <link href="./css/bootstrap.min.css" rel="stylesheet" /><!-- Archivo CSS Bootstrap 5 -->
+    <!-- Archivo CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet" />
+    <link href="./css/formulario.css" rel="stylesheet" />
   </head>
     <body>
       <!-- Cuerpo -->
@@ -60,16 +61,19 @@
 
                 <!--Grupo Tipo documento -->
                 <div class="formulario__grupo" id="grupo__tdoc">
+                  <label for="nrodoc" class="formulario__label">Tipo Documento</label>
                   <select class="form-select" aria-label="Default select example">
-                    <option selected>Tipo Documento</option>
+                    <option selected>Selecciona</option>
                     <option value="1">CC</option>
                     <option value="2">RUT</option>
                     <option value="3">NIT</option>
                     <option value="3">ETC</option>
                   </select>
-                  <label for="tdoc" class="formulario__label">Nro Documento</label>
+                </div>
+                <div class="formulario__grupo" id="grupo_nrodoc">
+                  <label for="nrodoc" class="formulario__label">Nro Documento</label>
                     <div class="formulario__grupo-input">
-                      <input type="text" class="formulario__input" name="nrodoc" id="nroduc" placeholder="123456765">
+                      <input type="text" class="formulario__input" name="nrodoc" id="nrodoc" placeholder="123456765">
                       <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
                     <p class="formulario__input-error">El Nro de Documento tiene que ser de 4 a 16 digitos y solo puede contener numeros</p>
@@ -105,13 +109,32 @@
                     <p class="formulario__input-error">El correo solo puede contener, letras, numeros, puntos, guiones y guion bajo.</p>
                   </div>
                   <!--Grupo Telefono -->
-                 <div class="formulario__grupo" id="grupo__telefono">
-                  <label for=telefono" class="formulario__label">Telefono</label>
-                    <div class="formulario__grupo-input">
-                      <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="3110987485">
-                      <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                  <div class="formulario__grupo" id="grupo__telefono">
+                    <label for=telefono" class="formulario__label">Telefono</label>
+                      <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="3110987485">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                      </div>
+                      <p class="formulario__input-error">El Telefono solo puede contener numeros y el maximo son 10 digitos</p>
                     </div>
-                    <p class="formulario__input-error">El Telefono solo puede contener numeros y el maximo son 10 digitos</p>
+
+                   <!--Grupo Terminos y condiciones -->
+                  <div class="formulario__grupo" id="grupo__terminos">
+                    <label for=telefono" class="formulario__label">
+                      <input class="formulario__checkbox" type="checkbox" name="termino" id="termino">
+                      Acepto los termino y Condiciones.
+                    </label>
+                  </div>
+
+                  <!--Mensaje de Error -->
+                  <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellene el formulario correctamente.</p>
+                  </div>
+
+                  <!-- Boton de enviar-->
+                  <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <button type="submit" class="formulario__btn">Enviar</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito"></p>
                   </div>
             </form>
         </main>
