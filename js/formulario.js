@@ -1,3 +1,6 @@
+const formulario = document.getElementById('formulario');
+const inputs = document.querySelectorAll('#formulario input');
+
 const expresiones = {
     usuario : /^[a-zA-Z0-9\_\-]{4,16}$/, //letras, nuemeros, guion y guion_bajo.
     nombre  : /^[a-zA-ZÁ-ý\s]{1,48}$/, //letras y espacios, pueden llevar acentos.
