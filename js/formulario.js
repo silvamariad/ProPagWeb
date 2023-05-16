@@ -9,3 +9,7 @@ const expresiones = {
     correo  : /^[a-zA-Z0-9_.+]+@[a-zA-Z0-9]+\.[a-zA-Z0-9-.]+$/, //validacion para el campo del correo
     telefono: /^\d{7,10}$/ //7 a 10 numeros
 }
+
+formulario.addEventListener('submit', () => {
+    
+});
