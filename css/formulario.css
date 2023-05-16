@@ -83,6 +83,7 @@ main {
     background: #f66868;
     padding: 0 15px;
     border-radius: 3px;
+    display: none;
 }
 
 .formulario__mensaje-activo {
@@ -113,7 +114,7 @@ main {
 }
 
 .formulario__btn:hover {
-    box-shadow: 3px 8px 30px rgba(163,163,163, 0.4);
+    box-shadow: 3px 0px 30px rgba(163,163,163, 1);
 }
 
 .formulario__mensaje-exito {
@@ -125,6 +126,7 @@ main {
 .formulario__mensaje-exito-activo {
     display: block;
 }
+
 /* ---------- Validacion ---------- */
 .formulario__grupo-correcto .formulario__validacion-estado {
     color: #1ed12d;
