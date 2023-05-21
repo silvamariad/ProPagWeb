@@ -51,7 +51,7 @@ main {
 .formulario__input-error {
     font-size: 12px;
     margin-bottom: 0;
-    display: nome;
+    display: none;
 }
 
 .formulario__input-error-activo {
