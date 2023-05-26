@@ -31,7 +31,7 @@ main {
     position: relative;
 }
 
-.formulario__input {
+.formulario__input, form-select {
     width: 100%;
     background: #fff;
     border: 3px solid transparent;
@@ -42,7 +42,7 @@ main {
     transition: .3s ease all;
 }
 
-.formulario__input:focus {
+.formulario__input:focus, form-select:focus {
     border: 3px solid #0075FF;
     outline: nome;
     box-shadow: 3px 0px 30px rgba(132, 132, 132, 0.361);
