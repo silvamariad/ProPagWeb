@@ -11,11 +11,12 @@ const expresiones = {
 }
 
 const campos = {
-	usuario: false,
-	nombre: false,
-    nrodoc: false,
+	usuario	: false,
+	nombre	: false,
+	tipdoc	: false,
+    nrodoc	: false,
 	password: false,
-	correo: false,
+	correo	: false,
 	telefono: false
 }
 
@@ -94,7 +95,7 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const terminos = document.getElementById('terminos');
-	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
+	if(campos.usuario && campos.nombre  && campos.tipdoc  && campos.nrodoc && campos.password && campos.correo && campos.telefono && terminos.checked ){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
