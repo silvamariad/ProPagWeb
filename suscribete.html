@@ -43,7 +43,7 @@
                 <div class="formulario__grupo" id="grupo__usuario">
                   <label for="usuario" class="formulario__label">Usuario</label>
                     <div class="formulario__grupo-input">
-                      <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Carlos234">
+                      <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Carlos234" required>
                       <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
                     <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
@@ -53,7 +53,7 @@
                 <div class="formulario__grupo" id="grupo__nombre">
                   <label for="nombre" class="formulario__label">Nombre y Apellido</label>
                     <div class="formulario__grupo-input">
-                      <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Carlos Torres Vargas">
+                      <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Carlos Torres Vargas" required>
                       <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
                     <p class="formulario__input-error">El nombre tiene que ser de 4 a 16 digitos y solo puede contener letras y espacio.</p>
@@ -62,7 +62,7 @@
                 <!--Grupo Tipo documento -->
                 <div class="formulario__grupo" id="grupo__tdoc">
                   <label for="tipdoc" class="formulario__label">Tipo Documento</label>
-                  <select class="form-select" aria-label="Default select example">
+                  <select class="form-select" aria-label="Default select example" required>
                     <option selected>Selecciona</option>
                     <option value="1">CC</option>
                     <option value="2">RUT</option>
@@ -74,7 +74,7 @@
                 <div class="formulario__grupo" id="grupo__nrodoc">
                   <label for="nrodoc" class="formulario__label">Nro Documento</label>
                     <div class="formulario__grupo-input">
-                      <input type="number" class="formulario__input" name="nrodoc" id="nrodoc" placeholder="123456765">
+                      <input type="number" class="formulario__input" name="nrodoc" id="nrodoc" placeholder="123456765" required>
                       <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
                     <p class="formulario__input-error">El Nro de Documento tiene que ser de 4 a 16 digitos y solo puede contener numeros.</p>
@@ -84,7 +84,7 @@
                  <div class="formulario__grupo" id="grupo__password">
                   <label for=password" class="formulario__label">Contraseña</label>
                     <div class="formulario__grupo-input">
-                      <input type="password" class="formulario__input" name="password" id="password">
+                      <input type="password" class="formulario__input" name="password" id="password" required>
                       <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
                     <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 digitos.</p>
@@ -94,7 +94,7 @@
                  <div class="formulario__grupo" id="grupo__password2">
                   <label for=password2" class="formulario__label">Repetir Contraseña</label>
                     <div class="formulario__grupo-input">
-                      <input type="password" class="formulario__input" name="password2" id="password2">
+                      <input type="password" class="formulario__input" name="password2" id="password2" required>
                       <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
                     <p class="formulario__input-error">Ambas contraseña deben ser iguales.</p>
@@ -104,7 +104,7 @@
                  <div class="formulario__grupo" id="grupo__correo">
                   <label for=correo" class="formulario__label">Correo Electronico</label>
                     <div class="formulario__grupo-input">
-                      <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                      <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com" size="30" required>
                       <i class="formulario__validacion-estado fas fa-times-circle"></i>
                     </div>
                     <p class="formulario__input-error">El correo solo puede contener, letras, numeros, puntos, guiones y guion bajo.</p>
@@ -113,7 +113,7 @@
                   <div class="formulario__grupo" id="grupo__telefono">
                     <label for=telefono" class="formulario__label">Telefono</label>
                       <div class="formulario__grupo-input">
-                        <input type="number" class="formulario__input" name="telefono" id="telefono" placeholder="3110987485">
+                        <input type="number" class="formulario__input" name="telefono" id="telefono" placeholder="3110987485" required>
                         <i class="formulario__validacion-estado fas fa-times-circle"></i>
                       </div>
                       <p class="formulario__input-error">El Telefono solo puede contener numeros y el maximo son 10 digitos.</p>
