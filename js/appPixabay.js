@@ -15,8 +15,8 @@ const cargarImagenes=async()=>{
     /**variable constante para la appPixabay **/
     const imaginesPorPagina=20;
     const key="36197946-5703d23ead3a4135af9d516d8";
-    const url=`https://pixabay.com/api/?key=${key}&q=${input}&per_page=${imaginesPorPagina}&page=${paginaActual}`;
-    //console.log(url);
+    const url=`https://pixabay.com/api/?key=${key}&q=${input}&per_page=${imagenesPorPagina}&page=${paginaActual}`;
+    console.log(url);
     
     const respuesta=await fetch(url);
     const resultado=await respuesta.json();
