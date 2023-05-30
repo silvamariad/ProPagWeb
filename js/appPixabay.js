@@ -23,7 +23,7 @@ const cargarImagenes=async()=>{
 
     /** Respùesta de las img**/
     let imagenes=resultado.hits;
-    //console.log(imagenes);
+    console.log(resultado);
 
     /** como traer las img del json **/
     let imagenesHTML=``;
