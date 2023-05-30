@@ -52,21 +52,21 @@ const cargarImagenes=async()=>{
                                         <img src="./img/loading-gif.gif" width=300 height=300>
                                     </div>
                                 `;
-    
-    /**Mostrar las img en 3seg **/
-    setTimeout(()=>{divListadoImagenes.innerHTML=imagenesHTML;},3000);
-
     totalPaginas=Math.ceil(resultado.totalHits/imagenesPorPagina);
 
     let divPaginacion=document.querySelector("#paginacion");
-    
+                                
     let pagAnterior=(paginaActual===1) ?`` : `
     <button type="button" class="btn btn-inf" onclick="paginaAnterior()"> Anterior </button>`; 
-
+                            
     let pagSiguiente=(paginaActual===totalPaginas) ?`` : `
     <button type="button" class="btn btn-inf" onclick="paginaSiguiente()"> Siguiente </button>`;
     
-    divPaginacion.innerHTML=`${pagAnterior} ${pagSiguiente}`;
+    /**Mostrar las img en 3seg **/
+    setTimeout(()=>{
+        divListadoImagenes.innerHTML=imagenesHTML;
+        divPaginacion.innerHTML=`${pagAnterior} ${pagSiguiente}`;
+    },3000);
 
     const jumbotron=document.querySelector(".jumbotron");
     jumbotron.scrollIntoView({behavior:"smooth"});
