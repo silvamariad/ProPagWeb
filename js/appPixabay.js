@@ -55,8 +55,41 @@ const cargarImagenes=async()=>{
     
     /**Mostrar las img en 3seg **/
     setTimeout(()=>{divListadoImagenes.innerHTML=imagenesHTML;},3000);
+
+    totalPaginas=Math.ceil(resultado.totalHits/imagenesPorParguina);
+
+    let divPaginacion=document.querySelector("#paginacion");
+    
+    let pagAnterior=(paginaActual===1) ?`` : `
+    <button type="button" class="btn btn-inf" onclick="paginaAnterior()"> Anterior </button>`; 
+
+    let pagSiguiente=(paginaActual===totalPaginas) ?`` : `
+    <button type="button" class="btn btn-inf" onclick="paginaSiguiente()"> Siguiente </button>`;
+    
+    divPaguinacion.innerHTML=`${paginaAnterior} ${paginaSiguiente}`;
+
+    const jumbotron=document.querySelector(".jumbotron");
+    jumbotron.scrollIntoView({behavior:'smooth'});
 }
 
+/** Paginacion**/
+const paginaAnterior=()=>{
+    paginaActual--;
+    if(paginaActual===0){
+        return;
+    }else{ 
+        cargarImagenes();
+    }
+}
+
+const pagSiguiente=()=>{
+    paginaActual++;
+    if(paginaActual>totalPaginas){
+        return;
+    }else{
+        cargarImagenes();
+    }
+}
 /**msj Error **/
 const  mostrarError=(elemento, mensaje)=>{
     divError=document.querySelector(elemento);
