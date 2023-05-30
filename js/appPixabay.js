@@ -56,7 +56,7 @@ const cargarImagenes=async()=>{
     /**Mostrar las img en 3seg **/
     setTimeout(()=>{divListadoImagenes.innerHTML=imagenesHTML;},3000);
 
-    totalPaginas=Math.ceil(resultado.totalHits/imagenesPorParguina);
+    totalPaginas=Math.ceil(resultado.totalHits/imagenesPorPagina);
 
     let divPaginacion=document.querySelector("#paginacion");
     
