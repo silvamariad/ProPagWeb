@@ -69,7 +69,7 @@ const cargarImagenes=async()=>{
     divPaginacion.innerHTML=`${pagAnterior} ${pagSiguiente}`;
 
     const jumbotron=document.querySelector(".jumbotron");
-    jumbotron.scrollIntoView({behavior:'smooth'});
+    jumbotron.scrollIntoView({behavior:"smooth"});
 }
 
 /** Paginacion**/
