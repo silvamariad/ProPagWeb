@@ -82,7 +82,7 @@ const paginaAnterior=()=>{
     }
 }
 
-const pagSiguiente=()=>{
+const paginaSiguiente=()=>{
     paginaActual++;
     if(paginaActual>totalPaginas){
         return;
