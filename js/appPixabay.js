@@ -1,4 +1,4 @@
-var paginaActual=0;
+var paginaActual=1;
 var totalPaginas=0;
 
 /**Imagenes**/
