@@ -66,7 +66,7 @@ const cargarImagenes=async()=>{
     let pagSiguiente=(paginaActual===totalPaginas) ?`` : `
     <button type="button" class="btn btn-inf" onclick="paginaSiguiente()"> Siguiente </button>`;
     
-    divPaginacion.innerHTML=`${paginaAnterior} ${paginaSiguiente}`;
+    divPaginacion.innerHTML=`${pagAnterior} ${pagSiguiente}`;
 
     const jumbotron=document.querySelector(".jumbotron");
     jumbotron.scrollIntoView({behavior:'smooth'});
