@@ -7,9 +7,10 @@
 }
 
 /* para dejar el footer fijo*/
-.piepag .container{
+.piepag .container .text-muted{
     position: absolute;
     margin: auto 0;
     height: 20%;
     width: 100%;
+    color: white;
 }
