@@ -8,7 +8,7 @@
 
 /* para dejar el footer fijo*/
 .piepag, 
-.container, 
+.containerpie, 
 .text-muted{
     position: absolute;
     margin: auto 0;
