@@ -7,7 +7,7 @@
 }
 
 /* para dejar el footer fijo*/
-.piepag{
+.piepag .container{
     text-align: left;
     position: absolute;
     height: 50px;
