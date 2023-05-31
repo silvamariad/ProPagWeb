@@ -9,8 +9,7 @@
 /* para dejar el footer fijo*/
 .piepag{
     text-align: left;
-    padding: 0.5em;
     position: absolute;
-    width: 0;
-    height: 800px;
+    height: 200px;
+    width: 700px;
 }
