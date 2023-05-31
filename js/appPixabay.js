@@ -58,9 +58,9 @@ const cargarImagenes=async()=>{
                                 `;
     totalPaginas=Math.ceil(resultado.totalHits/imagenesPorPagina);
 
-    let divPaginacion=document.querySelector("#paginacion");
+    divPaginacion=document.querySelector("#paginacion");
                                 
-    let pagAnterior=(paginaActual===1) ?`` : `
+     let pagAnterior=(paginaActual===1) ?`` : `
     <button type="button" class="btn btn-inf" onclick="paginaAnterior()"> Anterior </button>`; 
                             
     let pagSiguiente=(paginaActual===totalPaginas) ?`` : `
