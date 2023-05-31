@@ -8,9 +8,9 @@
 
 /* para dejar el footer fijo*/
 .piepag .container{
-    text-align: left;
     position: absolute;
-    height: 50px;
-    width: 100%;
-    
+    height: 50%;
+    width: 120%;
+    border: black 1px solid;
+
 }
