@@ -10,5 +10,7 @@
 .piepag{
     text-align: left;
     padding: 0.5em;
-    line-height: 200px;
+    position: absolute;
+    width: 0;
+    height: 40px;
 }
