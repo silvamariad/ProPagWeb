@@ -61,10 +61,12 @@ const cargarImagenes=async()=>{
     let divPaginacion=document.querySelector("#paginacion");
                                 
     let pagAnterior=(paginaActual===1) ?`` : `
-    <button type="button" class="btn btn-primary btn-block" onclick="paginaAnterior()"> Anterior </button>`; 
+        <button type="button" class="btn btn-primary btn-block" onclick="paginaAnterior()"> Anterior </button>
+    `; 
                             
     let pagSiguiente=(paginaActual===totalPaginas) ?`` : `
-    <button type="button" class="btn btn-primary btn-block" onclick="paginaSiguiente()"> Siguiente </button>`;
+        <button type="button" class="btn btn-primary btn-block" onclick="paginaSiguiente()"> Siguiente </button>
+    `;
     
     /**Mostrar las img en 3seg **/
     setTimeout(()=>{
