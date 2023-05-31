@@ -5,14 +5,3 @@
     width: 400px;
 
 }
-
-/* para dejar el footer fijo*/
-.piepag, 
-.containerpie, 
-.text-muted{
-    position: absolute;
-    margin: auto 0;
-    height: 20%;
-    width: 100%;
-    color: white;
-}
