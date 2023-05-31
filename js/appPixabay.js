@@ -23,7 +23,7 @@ const cargarImagenes=async()=>{
 
     /** Respùesta de las img**/
     let imagenes=resultado.hits;
-    console.log(resultado);
+    //console.log(resultado);
 
     /** como traer las img del json **/
     let imagenesHTML=``;
@@ -58,13 +58,13 @@ const cargarImagenes=async()=>{
                                 `;
     totalPaginas=Math.ceil(resultado.totalHits/imagenesPorPagina);
 
-    divPaginacion=document.querySelector("#paginacion");
+    let divPaginacion=document.querySelector("#paginacion");
                                 
-     let pagAnterior=(paginaActual===1) ?`` : `
-    <button type="button" class="btn btn-inf" onclick="paginaAnterior()"> Anterior </button>`; 
+    let pagAnterior=(paginaActual===1) ?`` : `
+    <button type="button" class="btn btn-primary btn-block" onclick="paginaAnterior()"> Anterior </button>`; 
                             
     let pagSiguiente=(paginaActual===totalPaginas) ?`` : `
-    <button type="button" class="btn btn-inf" onclick="paginaSiguiente()"> Siguiente </button>`;
+    <button type="button" class="btn btn-primary btn-block" onclick="paginaSiguiente()"> Siguiente </button>`;
     
     /**Mostrar las img en 3seg **/
     setTimeout(()=>{
