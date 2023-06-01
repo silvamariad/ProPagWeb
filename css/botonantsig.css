@@ -5,3 +5,8 @@
     width: 400px;
 
 }
+
+.containerpie{
+    position: absolute;
+    top: auto;
+}
